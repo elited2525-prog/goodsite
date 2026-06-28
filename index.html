@@ -78,6 +78,34 @@ button{
 
 <div id="container"></div>
 
+// スマホ・タブレット判定
+const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent);
+
+if (isMobile) {
+    document.body.innerHTML = `
+        <div style="
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:#ffeef2;
+            text-align:center;
+            font-family:sans-serif;
+            padding:20px;
+        ">
+            <h1 style="color:#ff4f81;font-size:40px;">
+                ⚠️ PCからアクセスしてください
+            </h1>
+
+            <p style="font-size:22px;color:#555;">
+                このサイトはパソコン専用です💻
+            </p>
+        </div>
+    `;
+    throw new Error("Mobile access blocked");
+}
+
 <script>
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
