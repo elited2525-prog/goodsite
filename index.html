@@ -81,7 +81,7 @@ button{
 
 <script>
     // スマホ・タブレット判定
-const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent);
+const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent)|| window.innerWidth <= 900;;
 
 if (isMobile) {
     document.body.innerHTML = `
