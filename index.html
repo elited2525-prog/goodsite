@@ -78,7 +78,9 @@ button{
 
 <div id="container"></div>
 
-// スマホ・タブレット判定
+
+<script>
+    // スマホ・タブレット判定
 const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|Mobile/i.test(navigator.userAgent);
 
 if (isMobile) {
@@ -106,7 +108,6 @@ if (isMobile) {
     throw new Error("Mobile access blocked");
 }
 
-<script>
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
 const container = document.getElementById("container");
